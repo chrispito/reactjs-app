@@ -69,5 +69,5 @@ ENV NODE_ENV=${NODE_ENV:-development}
 
 # RUN if [ ! -f /app/npm-shrinkwrap.json ]; then echo "No npm-shrinkwrap.json found"; exit 1; fi
 
-# RUN if [ ${NODE_ENV} = "production" ]; then bash -l -c "npm run build:safe"; fi
+RUN if [ ${NODE_ENV} = "production" ]; then bash -l -c "npm run build:safe"; fi
 

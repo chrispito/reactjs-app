@@ -1,0 +1,25 @@
+{
+  "extends": ["../.eslintrc.json"],
+  "globals": {
+    "expect": true,
+    "shallow": true,
+    "mount": true,
+    "document": true,
+    "window": true,
+    "sinon": true,
+    "setValueTest": true,
+    "setValueTests": true,
+    "defaultReducerTests": true,
+    "initialStateTest": true,
+    "resetStateTest": true,
+    "watcherTest": true,
+    "watcherTests": true
+  },
+  "rules": {
+    "one-var-declaration-per-line": "off",
+    "one-var": "off"
+  },
+  "env": {
+    "mocha": true
+  }
+}

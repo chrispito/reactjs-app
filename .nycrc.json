@@ -1,0 +1,24 @@
+{
+  "sourceMap": false,
+  "instrument": false,
+  "all": true,
+  "cache": false,
+  "statements": 97,
+  "branches": 88,
+  "exclude": [
+    "src/api",
+    "src/utils",
+    "src/selectors",
+    "src/routes.js",
+    "src/index.js",
+    "src/store",
+    "src/containers/**/*.js",
+    "src/components/**/*.js"
+  ],
+  "include": [
+    "src/**/*.js"
+  ],
+  "reporter": [
+    "html"
+  ]
+}

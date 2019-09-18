@@ -1,0 +1,60 @@
+{
+  "extends": ["airbnb", "plugin:react/recommended"],
+  "plugins": ["standard", "react"],
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "/app/config/webpack.production.config.js"
+      }
+    }
+  },
+  "globals": {
+    "System": true
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "never"],
+    "function-paren-newline": ["error", "consistent"],
+    "object-curly-newline": ["error", { "consistent": true }],
+    "max-len": ["warn", { "code": 140 }],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "space-before-function-paren": ["error", "never"],
+    "no-unused-vars": ["error", {"vars": "all", "args": "after-used", "varsIgnorePattern": "afterEach", "argsIgnorePattern": "^_"}],
+    "react/no-danger": "off",
+    "react/forbid-prop-types": "off",
+    "class-methods-use-this": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "new-cap": "off",
+    "curly": ["error", "all"],
+    "brace-style": ["error", "1tbs"],
+    "react/no-unused-prop-types": [2, { "skipShapeProps": true }],
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "react/require-default-props": "off",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "react/jsx-max-props-per-line": [1, { "maximum": 1 }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "if", "next": "if" }
+    ],
+    "react/jsx-wrap-multilines": ["error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line"
+      }
+    ]
+  }
+}
