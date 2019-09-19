@@ -1,19 +1,32 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'connected-react-router'
+import { renderRoutes } from 'react-router-config'
 
 import { hot, setConfig } from 'react-hot-loader'
 
-import theme from './theme.scss'
-
+import routes from '../routes'
 
 setConfig({
   reloadHooks: false
 })
 
-const Application = () => (
-  <div className={theme.content}>
-    <h2>About React JS...</h2>
-    <p>Hello World!</p>
-  </div>
+const Application = ({ store, history }) => (
+  <Provider store={store}>
+    <Fragment>
+      <ConnectedRouter
+        history={history}
+      >
+        {renderRoutes(routes)}
+      </ConnectedRouter>
+    </Fragment>
+  </Provider>
 )
+
+Application.propTypes = {
+  store: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
+}
 
 export default hot(module)(Application)

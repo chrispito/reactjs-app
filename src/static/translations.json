@@ -1,0 +1,12 @@
+{
+  "wellcome": {
+    "de": "Willkommen!",
+    "en": "Wellcome!",
+    "fr": "Bienvenue!"
+  },
+  "force_reload_title": {
+    "de": "Die Seite wird new geladen!",
+    "en": "The page will reload!",
+    "fr": "La page va être rechargée!"
+  }
+}

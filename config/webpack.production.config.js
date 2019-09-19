@@ -137,7 +137,7 @@ const config = {
           'css-loader',
           'postcss-loader'
         ],
-        include: [ /material-design-icons/, /typeface-roboto/ ]
+        include: [ /material-design-icons/, /antd/, /typeface-roboto/ ]
       },
       {
         test: /\.s?css$/,

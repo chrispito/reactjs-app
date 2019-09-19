@@ -2,6 +2,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 
+import store from './store'
+import history from './store/configureHistory'
 import Application from './containers/Application'
 
 global.mouseX = 0
@@ -17,7 +19,10 @@ window.onmousemove = (e) => {
 
 
 render(
-  <Application />,
+  <Application
+    store={store}
+    history={history}
+  />,
   document.getElementById('reactjs-app')
 )
 

@@ -138,7 +138,15 @@ const config = {
             loader: 'sass-loader',
           }
         ],
-        include: [ '/app/src', /normalize.css/ ]
+        include: [ '/app/src', /normalize.css/]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+        include: [ /antd/ ]
       },
       {
         test: /\.gif$/,
