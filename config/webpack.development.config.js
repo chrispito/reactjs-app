@@ -78,6 +78,22 @@ const config = {
     noParse: [/jszip.js/],
     rules: [
       {
+        test: /\.less$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          {
+            loader: 'less-loader',
+            options: {
+              modifyVars: {
+                'hack': `true; @import "/app/src/custom-style.less";`
+              },
+              javascriptEnabled: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.jsx?$/,
         include: /node_modules/,
         exclude: /jszip/,
@@ -175,6 +191,7 @@ const config = {
         use: {
           loader: 'url-loader',
           options: {
+            limit: 10000,
             mimetype: 'application/font-woff'
           }
         }

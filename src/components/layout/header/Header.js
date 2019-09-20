@@ -7,18 +7,23 @@ import theme from './theme.scss'
 
 
 export default class HeaderComp extends Component {
+  constructor(props) {
+    super(props)
+    this.onClick = this.onClick.bind(this)
+  }
+
   onClick(pathname) {
     const { onItemClick } = this.props
     onItemClick(pathname)
   }
 
-  renderLink(key, pathname, labelKey, icon) {
+  renderLink(pathname, labelKey, icon) {
     const { i18n } = this.props
 
     return (
       <Menu.Item
-        key={key}
-        onClick={this.onClick.bind(this, pathname)}
+        key={labelKey}
+        onClick={() => this.onClick(pathname)}
       >
         <Icon type={icon} />
         {i18n.get(labelKey)}
@@ -30,15 +35,18 @@ export default class HeaderComp extends Component {
     const { Header } = Layout
 
     return (
-      <Header>
-        <div className={theme.logo} />
+      <Header className={theme.header}>
+        <div className="logo">
+          Reactive Piano
+        </div>
         <Menu
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={['2']}
           className={theme.menu}
         >
-          {this.renderLink('1', '/home', 'home', 'home')}
+          {this.renderLink('/home', 'home', 'home')}
+          {this.renderLink('/keys', 'keys', 'project')}
         </Menu>
       </Header>
     )

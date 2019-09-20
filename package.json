@@ -68,6 +68,7 @@
     "throttle-debounce": "^2.1.0",
     "tinycolor2": "^1.4.1",
     "tldjs": "^2.3.1",
+    "tone": "^13.8.25",
     "typeface-roboto": "0.0.75",
     "validator": "^11.1.0",
     "xlsx": "^0.15.1"
@@ -119,6 +120,8 @@
     "jest-mock": "^24.9.0",
     "jsdom": "^15.1.1",
     "json-loader": "^0.5.7",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "mocha": "^6.2.0",
     "node-sass": "^4.12.0",

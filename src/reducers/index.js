@@ -3,6 +3,7 @@ import { connectRouter } from 'connected-react-router'
 
 import app from './app'
 import environment from './environment'
+import keys from './keys'
 import i18n from './i18n'
 import device from './device'
 
@@ -11,6 +12,7 @@ const appReducer = (history) => combineReducers({
   device,
   environment,
   i18n,
+  keys,
   router: connectRouter(history)
 })
 

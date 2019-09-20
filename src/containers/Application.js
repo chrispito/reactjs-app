@@ -7,6 +7,9 @@ import { renderRoutes } from 'react-router-config'
 import { hot, setConfig } from 'react-hot-loader'
 
 import routes from '../routes'
+import 'antd/dist/antd.less'
+import 'custom-style.less'
+import 'style.scss'
 
 setConfig({
   reloadHooks: false

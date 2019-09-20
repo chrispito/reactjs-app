@@ -14,10 +14,20 @@
     "en": "Reactive Piano ©2019 Created by @chrispito",
     "fr": "Reactive Piano ©2019 Crée par @chrispito"
   },
+  "keys_intro_text": {
+    "de": "Die Schlüssel Tabelle",
+    "en": "The Key Tabel",
+    "fr": "La table des clefs"
+  },
   "home": {
     "de": "Home",
     "en": "Home",
     "fr": "Aceuil"
+  },
+  "keys": {
+    "de": "Schlüßeln",
+    "en": "Keys",
+    "fr": "Notes"
   },
   "wellcome": {
     "de": "Willkommen!",

@@ -1,10 +1,6 @@
-/* global window */
 import { handleActions } from 'redux-actions'
 import { fromJS } from 'immutable'
 import moment from 'moment-timezone'
-import { parse } from 'query-string-es5'
-
-import { readCookie } from 'utils/cookieHelper'
 
 import * as Actions from 'actions/app'
 
@@ -12,14 +8,11 @@ const timezone = moment.tz.guess() || 'Europe/Berlin'
 
 moment.tz.setDefault(timezone)
 
-const nid = parseInt(parse(window.location.hash.split('?')[1] || '').nid, 10)
-
 export const initialState = fromJS({
-  bffVersion: null,
+  apiVersion: null,
   accessToken: null,
   viewVersion: null,
   forceReload: false,
-  activeNewsradarId: nid || parseInt(readCookie('groot_newsradar'), 10) || null,
   appIsReady: false,
   loginMsg: '',
   loginError: false,
@@ -40,8 +33,6 @@ export default handleActions({
     .set('loginError', loginError),
   [Actions.loginRequestError]: (state, { payload: msg }) => state.set('loginMsg', msg).set('loginError', true),
   [Actions.loginRequestAborted]: (state, { payload: msg }) => state.set('loginMsg', msg).set('loginError', true),
-  [Actions.logoutRequestSuccess]: (state) => initialState.set('activeNewsradarId', state.get('activeNewsradarId')),
-  [Actions.setActiveNewsradar]: (state, { payload: newsradarId }) => state.set('activeNewsradarId', newsradarId),
   [Actions.setAppBarMessage]: (state, { payload: message }) => state.set('appBarMessage', message),
   [Actions.setAppMessage]: (state, { payload: message }) => state.set('appMessage', message),
   [Actions.setAppReady]: (state) => state.set('appIsReady', true),
@@ -55,7 +46,7 @@ export default handleActions({
 
     return state.set('loading', payload)
   },
-  [Actions.setBffVersion]: (state, { payload: bffVersion }) => state.set('bffVersion', bffVersion),
+  [Actions.setApiVersion]: (state, { payload: apiVersion }) => state.set('apiVersion', apiVersion),
   [Actions.setViewVersion]: (state, { payload: viewVersion }) => state.set('viewVersion', viewVersion),
   [Actions.forceReload]: (state) => state.set('forceReload', true),
   [Actions.toggleSuccess]: (state, { payload }) => state.update('success', (success) => (payload !== undefined ? payload : !success)),
