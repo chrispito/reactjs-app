@@ -1,7 +1,7 @@
 /* global window */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Statistic, Row, Col } from 'antd';
+import { Statistic, Row, Col } from 'antd'
 
 
 const maxSeconds = 60
@@ -34,25 +34,30 @@ export default class ForceReload extends Component {
   render() {
     const { i18n } = this.props
     const { seconds } = this.state
-    const { Countdown } = Statistic;
+    const { Countdown } = Statistic
     const deadline = Date.now() + 1000 * 60 * maxSeconds
 
     if (seconds >= maxSeconds) {
       this.reload()
     }
 
-    return (<div>
-      <Row gutter={16}>
-        <Col span={24}>
-          <Countdown title="Countdown" value={deadline} onFinish={this.reload} />
-        </Col>
-      </Row>
-      <Row gutter={16}>
-        <Col span={24}>
-          {i18n.get('force_reload_title')}
-        </Col>
-      </Row>
-    </div>
+    return (
+      <div>
+        <Row gutter={16}>
+          <Col span={24}>
+            <Countdown
+              title="Countdown"
+              value={deadline}
+              onFinish={this.reload}
+            />
+          </Col>
+        </Row>
+        <Row gutter={16}>
+          <Col span={24}>
+            {i18n.get('force_reload_title')}
+          </Col>
+        </Row>
+      </div>
     )
   }
 }

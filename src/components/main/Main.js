@@ -1,17 +1,22 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { renderRoutes } from 'react-router-config'
-import { ConfigProvider } from 'antd';
-import frFR from 'antd/es/locale/fr_FR';
+import { ConfigProvider, Layout } from 'antd'
+import frFR from 'antd/es/locale/fr_FR'
 
 import ForceReload from 'containers/ForceReload'
+import Footer from 'containers/layout/Footer'
+import Header from 'containers/layout/Header'
+
+import theme from './theme.scss'
 
 
-const MainComp = ({ initEnvironment, environmentIsLoaded, route, forceReload }) => {
+export default function Main({ initEnvironment, environmentIsLoaded, route, forceReload }) {
   useEffect(() => {
     initEnvironment()
   }, [])
 
+  const { Content } = Layout
   let reloadComp
   if (forceReload) {
     reloadComp = <ForceReload />
@@ -20,9 +25,13 @@ const MainComp = ({ initEnvironment, environmentIsLoaded, route, forceReload }) 
   let body
   if (environmentIsLoaded) {
     body = (
-      <Fragment>
-        {renderRoutes(route.routes)}
-      </Fragment>
+      <Layout className={theme.layout}>
+        <Header />
+        <Content>
+          {renderRoutes(route.routes)}
+        </Content>
+        <Footer />
+      </Layout>
     )
   }
 
@@ -31,24 +40,16 @@ const MainComp = ({ initEnvironment, environmentIsLoaded, route, forceReload }) 
   }
 
   return (
-    <Fragment>
+    <ConfigProvider locale={frFR}>
       {reloadComp}
       {body}
-    </Fragment>
+    </ConfigProvider>
   )
 }
 
-MainComp.propTypes = {
+Main.propTypes = {
   environmentIsLoaded: PropTypes.bool.isRequired,
   initEnvironment: PropTypes.func.isRequired,
   forceReload: PropTypes.bool.isRequired,
   route: PropTypes.object.isRequired
-}
-
-export default function Main(props) {
-  return (
-    <ConfigProvider locale={frFR}>
-      <MainComp />
-    </ConfigProvider>
-  )
 }

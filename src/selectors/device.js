@@ -1,4 +1,4 @@
-export const getDevice = state => state.device // eslint-disable-line import/prefer-default-export
+export const getDevice = (state) => state.device // eslint-disable-line import/prefer-default-export
 export const getBreakpoint = (state) => {
   const device = getDevice(state)
 

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
@@ -14,13 +14,11 @@ setConfig({
 
 const Application = ({ store, history }) => (
   <Provider store={store}>
-    <Fragment>
-      <ConnectedRouter
-        history={history}
-      >
-        {renderRoutes(routes)}
-      </ConnectedRouter>
-    </Fragment>
+    <ConnectedRouter
+      history={history}
+    >
+      {renderRoutes(routes)}
+    </ConnectedRouter>
   </Provider>
 )
 

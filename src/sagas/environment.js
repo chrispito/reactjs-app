@@ -1,4 +1,4 @@
-/* global window, document */
+/* global window */
 import { call, put, takeEvery, all } from 'redux-saga/effects'
 
 import * as Actions from 'actions/environment'

@@ -34,5 +34,5 @@ const buildState = (loc) => {
 export const initialState = buildState(locale)
 
 export default handleActions({
-  [ConfigActions.setLanguage]: (state, { payload: { lang } }) => buildState(lang)
+  [ConfigActions.setLanguage]: (state, { payload: { languageShort } }) => buildState(languageShort)
 }, initialState)

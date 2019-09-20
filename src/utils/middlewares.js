@@ -5,7 +5,7 @@ export const trackExceptions = (_store) => (next) => (action) => {
     return next(action)
   } catch (error) {
     if (!error.response || (error.response && error.response.statusCode !== 401)) {
-      console.error("Error....")
+      console.error('Error....')
     }
     throw error
   }
@@ -13,16 +13,15 @@ export const trackExceptions = (_store) => (next) => (action) => {
 
 export const trackActions = (_store) => (next) => (action) => {
   try {
-    let category = 'AUTO_TRACKING'
-    let act = action.type
+    const category = 'AUTO_TRACKING'
+    const act = action.type
     const parts = action.type.split('/')
 
-    console.log("User-Actions: ", {
+    console.log('User-Actions: ', {
       cat: category,
-      act: act,
-      parts: parts
+      act,
+      parts
     })
-
   } catch (error) { // eslint-disable-line no-empty
   }
 

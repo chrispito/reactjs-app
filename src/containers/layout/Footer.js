@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import ForceReload from 'components/force_reload'
+import Footer from 'components/layout/footer'
 
 import { getI18n } from 'selectors'
 
@@ -8,4 +8,4 @@ const mapStateToProps = (state) => ({
   i18n: getI18n(state)
 })
 
-export default connect(mapStateToProps)(ForceReload)
+export default connect(mapStateToProps)(Footer)

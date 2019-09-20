@@ -1,12 +1,27 @@
 {
-  "wellcome": {
-    "de": "Willkommen!",
-    "en": "Wellcome!",
-    "fr": "Bienvenue!"
+  "fail_message": {
+    "de": "Das hätte nicht passieren dürfen.",
+    "en": "This shouldn't have happened",
+    "fr": "Ceci n'aurait pas dû arriver ! "
   },
   "force_reload_title": {
     "de": "Die Seite wird new geladen!",
     "en": "The page will reload!",
     "fr": "La page va être rechargée!"
+  },
+  "footer_copy_right": {
+    "de": "Reactive Piano ©2019Herstellt durch @chrispito",
+    "en": "Reactive Piano ©2019 Created by @chrispito",
+    "fr": "Reactive Piano ©2019 Crée par @chrispito"
+  },
+  "home": {
+    "de": "Home",
+    "en": "Home",
+    "fr": "Aceuil"
+  },
+  "wellcome": {
+    "de": "Willkommen!",
+    "en": "Wellcome!",
+    "fr": "Bienvenue!"
   }
 }
