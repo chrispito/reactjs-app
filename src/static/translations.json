@@ -29,6 +29,31 @@
     "en": "Keys",
     "fr": "Notes"
   },
+  "octave": {
+    "de": "Oktave",
+    "en": "Octave",
+    "fr": "Octave"
+  },
+  "octaves": {
+    "de": "Oktaven",
+    "en": "Octaves",
+    "fr": "Octaves"
+  },
+  "selected_key": {
+    "de": "Ausgewählte Note",
+    "en": "Selected key",
+    "fr": "Note selectionée"
+  },
+  "tone": {
+    "de": "Ton",
+    "en": "Tone",
+    "fr": "Note"
+  },
+  "tones": {
+    "de": "Töne",
+    "en": "Keys",
+    "fr": "Notes"
+  },
   "wellcome": {
     "de": "Willkommen!",
     "en": "Wellcome!",

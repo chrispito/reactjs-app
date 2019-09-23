@@ -1,0 +1,211 @@
+@import 'colors';
+
+.press-color {
+  color: $press-color !important;
+}
+
+.press-background-color {
+  background-color: $press-color !important;
+}
+
+.print-color {
+  color: $print-color !important;
+}
+
+.print-background-color {
+  background-color: $print-color !important;
+}
+
+.web-color {
+  color: $web-color !important;
+}
+
+.web-background-color {
+  background-color: $web-color !important;
+}
+
+.internet-color {
+  color: $internet-color !important;
+}
+
+.internet-background-color {
+  background-color: $internet-color !important;
+}
+
+.tv-color {
+  color: $tv-color !important;
+}
+
+.tv-background-color {
+  background-color: $tv-color !important;
+}
+
+.radio-color {
+  color: $radio-color !important;
+}
+
+.radio-background-color {
+  background-color: $radio-color !important;
+}
+
+.blog-color {
+  color: $blog-color !important;
+}
+
+.blog-background-color {
+  background-color: $blog-color !important;
+}
+
+.facebook-color {
+  color: $facebook-color !important;
+}
+
+.facebook-background-color {
+  background-color: $facebook-color !important;
+}
+
+.twitter-color {
+  color: $twitter-color !important;
+}
+
+.twitter-background-color {
+  background-color: $twitter-color !important;
+}
+
+.youtube-color {
+  color: $youtube-color !important;
+}
+
+.youtube-background-color {
+  background-color: $youtube-color !important;
+}
+
+.dailymotion-color {
+  color: $dailymotion-color !important;
+}
+
+.dailymotion-background-color {
+  background-color: $dailymotion-color !important;
+}
+
+.instagram-color {
+  color: $instagram-color !important;
+}
+
+.instagram-background-color {
+  background-color: $instagram-color !important;
+}
+
+.google-plus-color {
+  color: $google-plus-color !important;
+}
+
+.google-plus-background-color {
+  background-color: $google-plus-color !important;
+}
+
+.forum-color {
+  color: $forum-color !important;
+}
+
+.forum-background-color {
+  background-color: $forum-color !important;
+}
+
+.agency-color {
+  color: $agency-color !important;
+}
+
+.agency-background-color {
+  background-color: $agency-color !important;
+}
+
+.foursquare-color {
+  color: $foursquare-color !important;
+}
+
+.foursquare-background-color {
+  background-color: $foursquare-color !important;
+}
+
+.mixcloud-color {
+  color: $mixcloud-color !important;
+}
+
+.mixcloud-background-color {
+  background-color: $mixcloud-color !important;
+}
+
+.soundcloud-color {
+  color: $soundcloud-color !important;
+}
+
+.soundcloud-background-color {
+  background-color: $soundcloud-color !important;
+}
+
+.vimeo-color {
+  color: $vimeo-color !important;
+}
+
+.vimeo-background-color {
+  background-color: $vimeo-color !important;
+}
+
+.weibo-color {
+  color: $weibo-color !important;
+}
+
+.weibo-background-color {
+  background-color: $weibo-color !important;
+}
+
+.flickr-color {
+  color: $flickr-color !important;
+}
+
+.flickr-background-color {
+  background-color: $flickr-color !important;
+}
+
+.linkedin-color {
+  color: $linkedin-color !important;
+}
+
+.linkedin-background-color {
+  background-color: $linkedin-color !important;
+}
+
+.xing-color {
+  color: $xing-color !important;
+}
+
+.xing-background-color {
+  background-color: $xing-color !important;
+}
+
+.whatsapp-color {
+  color: $whatsapp-color !important;
+}
+
+.whatsapp-background-color {
+  background-color: $whatsapp-color !important;
+}
+
+.mail-color {
+  color: $mail-color !important;
+}
+
+.mail-background-color {
+  background-color: $mail-color !important;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}

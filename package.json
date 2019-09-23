@@ -27,6 +27,10 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
+    "@material-ui/core": "^4.4.3",
+    "@material-ui/icons": "^4.4.3",
+    "@material-ui/pickers": "^3.2.6",
+    "@material-ui/styles": "^4.4.3",
     "antd": "^3.23.3",
     "camelcase": "^5.3.1",
     "camelcase-keys-deep": "^0.1.0",
@@ -39,6 +43,7 @@
     "html2canvas": "^1.0.0-rc.3",
     "immutable": "^4.0.0-rc.12",
     "js-cookie": "^2.2.1",
+    "material-design-icons-iconfont": "^5.0.1",
     "mobile-detect": "^1.4.3",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
