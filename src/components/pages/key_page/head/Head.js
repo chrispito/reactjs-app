@@ -16,13 +16,20 @@ export default class Head extends Component {
     }
   }
 
-
-  onTonesChange = (tone) => {
-    this.props.selectTone(tone)
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      tone: newProps.tone,
+      octave: newProps.octave
+    })
   }
 
-  onOctavesChange = (octave) => {
-    this.props.selectOctave(octave)
+
+  onTonesChange = (event) => {
+    this.props.selectTone(event.target.value)
+  }
+
+  onOctavesChange = (event) => {
+    this.props.selectOctave(event.target.value)
   }
 
 
@@ -40,40 +47,38 @@ export default class Head extends Component {
           className={theme.TonesContainer}
           span={4}
         >
-          <span>{i18n.get('tones')}</span>
           <Select
-            defaultValue={tone}
-            placeholder={i18n.get('select_tone')}
+            value={tone}
+            label={i18n.get('select_tone')}
             onChange={this.onTonesChange}
           >
-            {tones.map((tone) => {
+            {tones.map((item) => (
               <MenuItem
-                key={tone}
-                value={tone}
+                key={item}
+                value={item}
               >
-                {tone}
+                {item}
               </MenuItem>
-            })}
+            ))}
           </Select>
         </Col>
         <Col
           className={theme.OctavesContainer}
           span={4}
         >
-          <span>{i18n.get('octaves')}</span>
           <Select
-            defaultValue={tone}
-            placeholder={i18n.get('select_tone')}
-            onChange={this.onTonesChange}
+            value={octave.toString()}
+            label={i18n.get('select_tone')}
+            onChange={this.onOctavesChange}
           >
-            {octaves.map((octave) => {
+            {octaves.map((item) => (
               <MenuItem
-                key={octave}
-                value={octave}
+                key={item}
+                value={item}
               >
-                {octave}
+                {item.toString()}
               </MenuItem>
-            })}
+            ))}
           </Select>
         </Col>
       </Row>
@@ -85,7 +90,7 @@ Head.propTypes = {
   i18n: PropTypes.object.isRequired,
   tones: PropTypes.object.isRequired,
   octaves: PropTypes.object.isRequired,
-  octave: PropTypes.string.isRequired,
+  octave: PropTypes.number.isRequired,
   tone: PropTypes.string.isRequired,
 
   selectOctave: PropTypes.func.isRequired,
