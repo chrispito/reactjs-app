@@ -157,14 +157,6 @@ const config = {
         include: [ '/app/src', /normalize.css/]
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
-        include: [ /antd/ ]
-      },
-      {
         test: /\.gif$/,
         use: [
           {

@@ -29,7 +29,6 @@
     "@babel/plugin-proposal-export-namespace-from",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties"
-    // ["import", { "libraryName": "antd", "style": "css"}]
   ],
   "presets": [
     "@babel/preset-env",
