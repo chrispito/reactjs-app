@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Row, Col, Button, Icon, AutoComplete } from 'antd'
-import { Select, MenuItem } from '@material-ui/core'
+import { Select, MenuItem, Container, Grid } from '@material-ui/core'
 
 import theme from './theme.scss'
 
@@ -38,15 +37,8 @@ export default class Head extends Component {
     const { tone, octave } = this.state
 
     return (
-      <Row
-        gutter={16}
-        type="flex"
-        justify="center"
-      >
-        <Col
-          className={theme.TonesContainer}
-          span={4}
-        >
+      <Container>
+        <Grid className={theme.TonesContainer}>
           <Select
             value={tone}
             label={i18n.get('select_tone')}
@@ -61,11 +53,8 @@ export default class Head extends Component {
               </MenuItem>
             ))}
           </Select>
-        </Col>
-        <Col
-          className={theme.OctavesContainer}
-          span={4}
-        >
+        </Grid>
+        <Grid className={theme.OctavesContainer}>
           <Select
             value={octave.toString()}
             label={i18n.get('select_tone')}
@@ -80,8 +69,8 @@ export default class Head extends Component {
               </MenuItem>
             ))}
           </Select>
-        </Col>
-      </Row>
+        </Grid>
+      </Container>
     )
   }
 }

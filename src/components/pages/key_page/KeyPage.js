@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Synth } from 'tone'
 import PropTypes from 'prop-types'
-import { Row, Col, Button, Icon, Divider, Badge } from 'antd'
+import { Container, Grid } from '@material-ui/core'
 
 import Head from 'containers/pages/key_page/Head'
 
@@ -78,16 +78,12 @@ export default class KeyPage extends Component {
     return (
       <div className={theme.content}>
         <Head />
-        <Row
-          gutter={16}
-          type="flex"
-          justify="center"
-        >
-          <Col span={8}>
+        <Container>
+          <Grid>
             <span>{i18n.get('selected_key')}:</span>
             <span>{selectedKey.get('key')}</span>
-          </Col>
-        </Row>
+          </Grid>
+        </Container>
       </div>
     )
   }

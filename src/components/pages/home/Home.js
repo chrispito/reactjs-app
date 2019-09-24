@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Row, Col } from 'antd'
+import { Container, Typography } from '@material-ui/core'
 
-import theme from './theme.scss'
+// import theme from './theme.scss'
 
 
 export default class Home extends PureComponent {
@@ -10,14 +10,11 @@ export default class Home extends PureComponent {
     const { i18n } = this.props
 
     return (
-      <Row gutter={16}>
-        <Col
-          span={24}
-          className={theme.content}
-        >
+      <Container gutter={16}>
+        <Typography>
           {i18n.get('wellcome')}
-        </Col>
-      </Row>
+        </Typography>
+      </Container>
     )
   }
 }

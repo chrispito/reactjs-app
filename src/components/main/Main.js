@@ -1,22 +1,25 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { renderRoutes } from 'react-router-config'
-import { ConfigProvider, Layout } from 'antd'
-import frFR from 'antd/es/locale/fr_FR'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { StylesProvider, createGenerateClassName } from '@material-ui/styles'
 
 import ForceReload from 'containers/ForceReload'
 import Footer from 'containers/layout/Footer'
 import Header from 'containers/layout/Header'
+import WithWhitelabelMuiTheme from 'containers/WithMuiTheme'
 
-import theme from './theme.scss'
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'rpiano',
+  disableGlobal: true
+})
 
 
-export default function Main({ initEnvironment, environmentIsLoaded, route, forceReload }) {
+function MainComp({ initEnvironment, environmentIsLoaded, route, forceReload }) {
   useEffect(() => {
     initEnvironment()
   }, [])
 
-  const { Content } = Layout
   let reloadComp
   if (forceReload) {
     reloadComp = <ForceReload />
@@ -25,13 +28,12 @@ export default function Main({ initEnvironment, environmentIsLoaded, route, forc
   let body
   if (environmentIsLoaded) {
     body = (
-      <Layout className={theme.layout}>
+      <>
+        <CssBaseline />
         <Header />
-        <Content>
-          {renderRoutes(route.routes)}
-        </Content>
+        {renderRoutes(route.routes)}
         <Footer />
-      </Layout>
+      </>
     )
   }
 
@@ -40,16 +42,31 @@ export default function Main({ initEnvironment, environmentIsLoaded, route, forc
   }
 
   return (
-    <ConfigProvider locale={frFR}>
+    <>
       {reloadComp}
       {body}
-    </ConfigProvider>
+    </>
   )
 }
 
-Main.propTypes = {
+MainComp.propTypes = {
   environmentIsLoaded: PropTypes.bool.isRequired,
   initEnvironment: PropTypes.func.isRequired,
   forceReload: PropTypes.bool.isRequired,
   route: PropTypes.object.isRequired
+}
+
+const StyledMain = WithWhitelabelMuiTheme(MainComp)
+
+export default function Main(props) {
+  /* eslint-disable */
+  return (
+    <StylesProvider
+      generateClassName={generateClassName}
+      injectFirst
+    >
+      <StyledMain {...props} />
+    </StylesProvider>
+  )
+  /* eslint-enable */
 }

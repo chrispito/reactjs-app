@@ -6,6 +6,7 @@ import environment from './environment'
 import keys from './keys'
 import i18n from './i18n'
 import device from './device'
+import whitelabel from './whitelabel'
 
 const appReducer = (history) => combineReducers({
   app,
@@ -13,7 +14,8 @@ const appReducer = (history) => combineReducers({
   environment,
   i18n,
   keys,
-  router: connectRouter(history)
+  router: connectRouter(history),
+  whitelabel
 })
 
 // Pattern inspired by http://stackoverflow.com/questions/35622588/how-to-reset-the-state-of-a-redux-store
