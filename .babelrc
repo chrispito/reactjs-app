@@ -14,7 +14,7 @@
     "development": {
       "plugins": [
         "react-hot-loader/babel"
-      ],
+      ]
     },
     "test": {
       "plugins": [
