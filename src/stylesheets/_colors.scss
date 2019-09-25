@@ -301,45 +301,7 @@ $styleguide-generate-template: false !default;
 $color-dark-contrast: $color-white !default;
 $color-light-contrast: $color-black !default;
 
-@import 'theme.json';
-
-// channels
-$press-color: map-get($channels, press);
-$print-color: map-get($channels, print);
-$web-color: map-get($channels, web);
-$internet-color: map-get($channels, internet);
-$tv-color: map-get($channels, tv);
-$radio-color: map-get($channels, radio);
-$blog-color: map-get($channels, blog);
-$agency-color: map-get($channels, agency);
-
-$facebook-color: map-get($channels, facebook);
-$twitter-color: map-get($channels, twitter);
-$youtube-color: map-get($channels, youtube);
-$dailymotion-color: map-get($channels, dailymotion);
-$instagram-color: map-get($channels, instagram);
-$google-plus-color: map-get($channels, google-plus);
-$forum-color: map-get($channels, forum);
-$foursquare-color: map-get($channels, foursquare);
-$mixcloud-color: map-get($channels, mixcloud);
-$soundcloud-color: map-get($channels, soundcloud);
-$vimeo-color: map-get($channels, vimeo);
-$weibo-color: map-get($channels, weibo);
-$flickr-color: map-get($channels, flickr);
-$linkedin-color: map-get($channels, linkedin);
-$xing-color: map-get($channels, xing);
-
-$whatsapp-color: map-get($channels, whatsapp);
-$mail-color: map-get($channels, mail);
-
-// tonalities
-$neutral-tonality-color: map-get($tonalities, neutral);
-$negative-tonality-color: map-get($tonalities, negative);
-$positive-tonality-color: map-get($tonalities, positive);
-
-$color-primary: map-get($colors, primary) !default;
-$color-primary-dark: darken($color-primary, 10%) !default;
-$color-accent: map-get($colors, accent) !default;
-$color-accent-dark: darken($color-accent, 10%) !default;
+$color-primary: #212121 !default;
+$color-accent: #ff3d00 !default;
 $color-primary-contrast: $color-dark-contrast !default;
 $color-accent-contrast: $color-dark-contrast !default;

@@ -1,13 +1,26 @@
-.header,
-.menu {
-  height: 3rem;
-  line-height: 3rem;
+@import '~stylesheets/colors';
+
+.title {
+  padding: 0 2rem;
 }
 
-.logo {
-  width: 120px;
-  height: 31px;
-  margin: 16px 24px 16px 0;
-  float: left;
-  font-family: Moonlights;
+.menuContainer {
+  display: flex;
+  justify-content: space-between;
+  flex: auto;
+}
+
+.navBtnContainer {
+  background-color: $color-primary;
+}
+
+.root {
+
+  width: 8rem;
+  padding: 0 1rem;
+
+  &.selected {
+    color: $color-accent;
+    border-bottom: 0.3rem solid $color-accent;
+  }
 }

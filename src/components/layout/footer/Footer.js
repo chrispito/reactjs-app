@@ -17,7 +17,7 @@ function Copyright() {
         color="inherit"
         href="https://material-ui.com/"
       >
-        Your Website
+        R-Piano
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -31,21 +31,6 @@ export default class FooterComp extends PureComponent {
     return (
       <footer className={theme.footer}>
         <Container maxWidth="lg">
-          <Typography
-            variant="h6"
-            align="center"
-            gutterBottom
-          >
-            R-Piano
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            color="textSecondary"
-            component="p"
-          >
-            {i18n.get('footer_copy_right')}
-          </Typography>
           <Copyright />
         </Container>
       </footer>

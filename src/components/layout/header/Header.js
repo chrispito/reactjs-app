@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core'
 import HomeIcon from '@material-ui/icons/Home'
 import MusicNoteIcon from '@material-ui/icons/MusicNote'
+import SettingsIcon from '@material-ui/icons/Settings'
 
 import theme from './theme.scss'
 
@@ -21,8 +22,6 @@ export default class Header extends Component {
   }
 
   handleChange(event, value) {
-    console.log('event = ', event)
-    console.log('value = ', value)
     this.props.onItemClick(value)
   }
 
@@ -31,6 +30,7 @@ export default class Header extends Component {
 
     return (
       <BottomNavigationAction
+        classes={{ root: theme.root, selected: theme.selected }}
         label={i18n.get(labelKey)}
         value={pathname}
         icon={icon}
@@ -48,16 +48,18 @@ export default class Header extends Component {
           >
             Reactive Piano
           </Typography>
-          <BottomNavigation
-            showLabels
-            value={this.props.currentPath}
-            onChange={this.handleChange}
-            className={theme.root}
-          >
-            {this.renderLink('/home', 'home', <HomeIcon />)}
-            {this.renderLink('/keys', 'keys', <MusicNoteIcon />)}
-          </BottomNavigation>
-          <Button>Login</Button>
+          <div className={theme.menuContainer}>
+            <BottomNavigation
+              showLabels
+              value={this.props.currentPath}
+              onChange={this.handleChange}
+              className={theme.navBtnContainer}
+            >
+              {this.renderLink('/home', 'home', <HomeIcon />)}
+              {this.renderLink('/keys', 'keys', <MusicNoteIcon />)}
+            </BottomNavigation>
+            <Button><SettingsIcon /></Button>
+          </div>
         </Toolbar>
       </AppBar>
     )
