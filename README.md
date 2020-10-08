@@ -1,4 +1,4 @@
-# NewsRadar
+# React JS App
 
 This project contains a React / Redux single page application.
 
