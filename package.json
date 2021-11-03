@@ -74,7 +74,7 @@
     "tldjs": "^2.3.1",
     "tone": "^13.8.25",
     "typeface-roboto": "0.0.75",
-    "validator": "^11.1.0",
+    "validator": "^13.7.0",
     "xlsx": "^0.15.1"
   },
   "devDependencies": {
